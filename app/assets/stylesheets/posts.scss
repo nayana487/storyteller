@@ -1,3 +1,19 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.postElement {
+  background: #aaaaaa;
+  width: 650px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+ .postImage {
+   width: 600px;
+   height: 400px;
+ }
+ .postUserImage {
+   width: 70px;
+   height: 70px;
+  float: left;
+ }

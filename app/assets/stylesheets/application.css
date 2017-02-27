@@ -14,18 +14,6 @@
  *= require_self
  */
 
-.postElement {
-  background: #aaaaaa;
-  width: 650px;
-  margin-bottom: 50px;
-  padding: 20px;
-}
- .postImage {
-   width: 600px;
-   height: 400px;
- }
- .postUserImage {
-   width: 70px;
-   height: 70px;
-  float: left;
- }
+ *= require normalize-rails
+ *= require_self
+ *= require_tree .
