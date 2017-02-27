@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+  <div class="postElement">
+    <h2 class="postTitle"><%= post.title %> </h2>
+    <img class="postImage" src="<%= post.image %>"><br />
+    <img class="postUserImage" src="<%= post.user.image %>">
+    <h4>By: <%= post.user.name %></h4>
+    <h5>Created At: <%= post.created_at %>, Last Update: <%= post.updated_at %></h5>
+    <p> <%= post.content %> </p>
+  </div>
+<% end %>
