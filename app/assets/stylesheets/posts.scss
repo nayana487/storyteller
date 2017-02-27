@@ -4,17 +4,31 @@
 
 .postElement {
   background: #aaaaaa;
-  width: 350px;
-  margin-bottom: 50px;
+  width: 650px;
+  margin: 50px auto;
   padding: 20px;
   position: relative;
 }
  .postImage {
-   width: 300px;
-   height: 200px;
+   width: 600px;
+   height: 400px;
+   margin: 15px auto;
  }
- .postUserImage {
-   width: 70px;
-   height: 70px;
-  float: left;
+.postUserImage {
+   width: 60px;
+   height: 60px;
+   float: left;
+   margin-right: 10px;
  }
+.postArticle {
+  background: green;
+  width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.postShow {
+  background: yellow;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 10px;
+}
