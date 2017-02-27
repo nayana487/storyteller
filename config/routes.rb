@@ -8,4 +8,10 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :communities do
+    resources :stories do
+      resources :storycomments
+    end
+  end
+
 end
