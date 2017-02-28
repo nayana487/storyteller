@@ -15,10 +15,6 @@
  *= require_self
  */
 
-= require normalize-rails
-= require_tree .
-= require_self
-
 body {
    background: #aaaaaa;
    display: flex;
