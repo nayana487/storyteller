@@ -12,11 +12,18 @@
   <nav>
     <ul>
     <% if current_user %>
-      <li><%= link_to "Home", root_path %></li>
-      <!-- <li>Profile</li> -->
-      <li><%= link_to "Communities", communities_path %></li>
-      <li><%= link_to "Add Story", new_post_path %></li>
-      <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+      <% if current_user.id == 1 %>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Communities", communities_path %></li>
+          <li><%= link_to "Add Story", new_post_path %></li>
+          <li><%= link_to "Feedbacks", feedbacks_path %></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Communities", communities_path %></li>
+          <li><%= link_to "Add Story", new_post_path %></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+      <% end %>
     <% else %>
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Communities", communities_path %></li>
@@ -33,7 +40,12 @@
   </main>
 
 <footer>
-  <p>Developed with &hearts; by Mike Nabil</p>
+  <p>
+  Developed with &hearts; by Mike Nabil
+  <% if current_user %>
+    <%= link_to " (Give Feedback)", new_feedback_path %>
+  <% end %>
+  </p>
 </footer>
 
   </body>

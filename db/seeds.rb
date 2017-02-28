@@ -13,6 +13,7 @@ Community.destroy_all
 Story.destroy_all
 Storycomment.destroy_all
 Membership.destroy_all
+Feedback.destroy_all
 
 users = User.create([
   {email: "maikel_nabil@yahoo.com", password: "mikemike1", name: "Mike The First", age: 20, image: "http://www.ynetnews.com/PicServer3/2012/12/23/4352918/43529130100499408258no.jpg"},
@@ -63,4 +64,10 @@ memberships = Membership.create([
   {user_id: 1, community_id: 2},
   {user_id: 2, community_id: 3},
   {user_id: 3, community_id: 3}
+  ])
+
+feedbacks = Feedback.create([
+  {content: "Thanks", user_id: 2},
+  {content: "Great", user_id: 3},
+  {content: "Wow", user_id: 3}
   ])

@@ -1,29 +1,24 @@
 # Storyteller: The Social Network of Storytelling
 
-# Requirements
-...be built in Rails.
-...have at least 2 models with at least 1 association.
-...have complete RESTful routes for at least one of your resources with GET, POST, PUT, and DELETE.
-...have error handling for all resources.
-...utilize an ORM to create a database table structure (e.g. ActiveRecord) and interact with your stored relational data.
-...have semantically-clean HTML and CSS that passes the standard validators. (See "Resources" below)
-
 # Deliverables
 1. a link to your Github repository
 2. a link to your screencast presentation.
-
-Your repo should contain:
-1. A working full-stack application, built by you, that meets the technical requirements above.
-Frequent commits dating back to the very beginning of the project.
-2. A readme.md file in the root of your repo, with explanations of the technologies used, the approach taken, features, installation instructions, unsolved problems, etc.
-3. A planning directory in the root of your repo containing an ERD mapping out your project domain. You are welcome to include other planning documents (e.g., wireframes, user stories).
-4. A link to your hosted, working application in the URL section of your Github repo.
+...have error handling for all resources.
+...have semantically-clean HTML and CSS that passes the standard validators. (See "Resources" below)
+...pseudocode
+3. Your repo should contain:
+    a. A working full-stack application, built by you, that meets the technical requirements above.
+    Frequent commits dating back to the very beginning of the project.
+    b. A readme.md file in the root of your repo, with explanations of the technologies used, the approach taken, features, installation instructions, unsolved problems, etc.
+    c. A planning directory in the root of your repo containing an ERD mapping out your project domain. You are welcome to include other planning documents (e.g., wireframes, user stories).
+    d. A link to your hosted, working application in the URL section of your Github repo.
 
 # Project Description
+Storytelling is one of the oldest human practices. Humans used storytelling as a method of communication, even before writing was invented.
+Storyteller is a storytelling platform. It's a place where users can join, tell their stories, read other users' stories, and discuss these stories.
 
 # Technology
 
-# Pseudocode
 
 # User stories
 Three cases of user stories
@@ -36,7 +31,6 @@ Three cases of user stories
 - Only members in a community can add stories to this community
 - Include edit and new comment forms in the post and story show pages
 - Adding admin functionality
-- Add Feedback Form
 - Add favorites
 - Add tags
 - View your and other users profiles

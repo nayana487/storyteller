@@ -1,0 +1,7 @@
+<h2>leave Feedback!</h2>
+
+<%= form_for @feedback do |f| %>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <%= f.submit %>
+<% end %>
