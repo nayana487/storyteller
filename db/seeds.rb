@@ -12,6 +12,7 @@ Comment.destroy_all
 Community.destroy_all
 Story.destroy_all
 Storycomment.destroy_all
+Membership.destroy_all
 
 users = User.create([
   {email: "maikel_nabil@yahoo.com", password: "mikemike1", name: "Mike The First", age: 20, image: "http://www.ynetnews.com/PicServer3/2012/12/23/4352918/43529130100499408258no.jpg"},
@@ -46,11 +47,20 @@ stories = Story.create([
   {title: "Story Of The Immigrant", content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", image: "http://placehold.it/300x300/", user_id: 3, community_id: 3}
   ])
 
-Storycomments = Storycomment.create([
+storycomments = Storycomment.create([
   {content: "Comment on the first story.", story_id: 1, user_id: 1},
   {content: "Comment on the second story.", story_id: 2, user_id: 2},
   {content: "Comment on the third story.", story_id: 3, user_id: 3},
   {content: "Comment on the fourth story.", story_id: 4, user_id: 1},
   {content: "Comment on the fifth story.", story_id: 5, user_id: 2},
   {content: "Comment on the sixth story.", story_id: 6, user_id: 3}
+  ])
+
+memberships = Membership.create([
+  {user_id: 1, community_id: 1},
+  {user_id: 2, community_id: 1},
+  {user_id: 3, community_id: 2},
+  {user_id: 1, community_id: 2},
+  {user_id: 2, community_id: 3},
+  {user_id: 3, community_id: 3}
   ])

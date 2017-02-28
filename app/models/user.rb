@@ -6,4 +6,9 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :stories, dependent: :destroy
+  has_many :storycomments, dependent: :destroy
+
+  has_many :memberships
+  has_many :communities, through: :memberships
 end

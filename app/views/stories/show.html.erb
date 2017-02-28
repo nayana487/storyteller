@@ -1,0 +1,33 @@
+<article class="postArticle">
+<div class="postShow">
+<h2 class="postTitle"><%= @story.title %> </h2>
+<h2 class="postTitle">Community: <%= @story.community.name %> </h2>
+<img class="postImage" src="<%= @story.image %>"><br />
+<img class="postUserImage" src="<%= @story.user.image %>">
+<h4>By: <%= @story.user.name %></h4>
+<h4>Created At: <%= @story.created_at %>, Last Update: <%= @story.updated_at %></h4>
+<hr />
+<p> <%= @story.content %> </p>
+<% if current_user && current_user == @story.user %>
+  <%= link_to "Edit Story", edit_community_story_path(@story) %>
+  <%= link_to "Delete Story", community_story_path(@story), method: :delete %>
+<% end %>
+</div>
+
+<h3>Comments</h3>
+  <% if current_user %>
+    <%#= link_to "Add New Comment!", new_community_story_storycomment_path(@story) %>
+  <% end %>
+
+  <% @story.storycomments.each do |storycomment| %>
+    <div class="comment">
+      <time>Added by <%= storycomment.user.name %> at <%= storycomment.updated_at %></time>
+      <p><%= storycomment.content %></p>
+      <% if current_user && current_user == storycomment.user %>
+        <%= link_to "Edit", edit_community_story_storycomment_path(@story, storycomment) %> |
+        <%= link_to "Delete", community_story_storycomment_path(@story, storycomment), method: :delete %>
+        <% end %>
+    </div>
+  <% end %>
+
+</article>

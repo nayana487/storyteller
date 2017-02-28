@@ -39,6 +39,21 @@ class CommunitiesController < ApplicationController
     redirect_to communities_path
   end
 
+  #Join Community
+  def add_membership
+    @community = Community.find(params[:id])
+    @community.memberships.create!(user_id: current_user.id)
+    redirect_to :back
+  end
+
+  #Leave Community
+  def remove_membership
+    @community = Community.find(params[:id])
+    @user = current_user
+    Membership.find_by(community_id: @community.id, user_id: @user.id).destroy
+    redirect_to :back
+  end
+
   private
   def community_params
     params.require(:community).permit(:name, :header)

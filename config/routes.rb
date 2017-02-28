@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     resources :stories do
       resources :storycomments
     end
+    member do
+      post 'add_membership'
+      delete 'remove_membership'
+    end
   end
 
 end

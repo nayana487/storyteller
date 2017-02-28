@@ -16,7 +16,6 @@
  */
 
 body {
-   background: #aaaaaa;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -42,12 +41,15 @@ nav a {
  }
 main {
    margin: 0 auto;
-   width: 100vw;
+   width: 800px;
+   background: yellow;
  }
 footer {
    width: 100vw;
-   height: 10vh;
-   background: green;
+   /*height: 5vh;*/
+   background: blue;
+   color: white;
+   padding: 10px;
    text-align: center;
 }
 h2 {
