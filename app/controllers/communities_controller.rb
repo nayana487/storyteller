@@ -12,6 +12,11 @@ class CommunitiesController < ApplicationController
   #edit
   def edit
     @community = Community.find(params[:id])
+    if current_user.id == 1
+    else
+      redirect_to community_path(@community)
+      flash[:alert] = "Only admins can edit communities!"
+    end
   end
 
   #update
