@@ -1,26 +1,26 @@
 <% @posts.each do |post| %>
-  <div class="postElement">
-    <h2 class="postTitle"><%= link_to post.title, post_path(post) %></h2>
-    <img class="postImage" src="<%= post.image %>"><br />
-    <img class="postUserImage" src="<%= post.user.image %>">
-    <h4>By: <%= post.user.name %></h4>
+  <div class="element">
+    <h2 class="title"><%= link_to post.title, post_path(post) %></h2>
+    <img class="image" src="<%= post.image %>"><br />
+    <img class="userImage" src="<%= post.user.image %>">
+    <h3>By: <%= post.user.name %></h3>
     <h4>Created At: <%= post.created_at %>, Last Update: <%= post.updated_at %></h4>
     <hr />
     <p> <%= post.content %> </p>
   </div>
 <% end %>
 
-<div class="postElement">
+<div class="element barrier">
   <h2>Posts From Your Communities</h2>
 </div>
 
 <% @communities.each do |community| %>
   <% community.stories.each do |story| %>
-    <div class="postElement">
-      <h2 class="postTitle"><%= link_to story.title, community_path(story) %></h2>
-      <img class="postImage" src="<%= story.image %>"><br />
-      <img class="postUserImage" src="<%= story.user.image %>">
-      <h4>By: <%= story.user.name %></h4>
+    <div class="element">
+      <h2 class="title"><%= link_to story.title, community_path(story) %></h2>
+      <img class="image" src="<%= story.image %>"><br />
+      <img class="userImage" src="<%= story.user.image %>">
+      <h3>By: <%= story.user.name %></h3>
       <h4>Created At: <%= story.created_at %>, Last Update: <%= story.updated_at %></h4>
       <hr />
       <p> <%= story.content %> </p>

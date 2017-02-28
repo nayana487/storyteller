@@ -1,3 +1,18 @@
 // Place all the styles related to the Communities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header {
+  background: #f6f175;
+  width: 760px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.members {
+  background: #f6f175;
+  width: 750px;
+  margin: 50px auto;
+  padding: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}

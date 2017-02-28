@@ -2,33 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.postElement {
-  background: #aaaaaa;
+.element {
+  background: #f6f175;
   width: 650px;
   margin: 50px auto;
   padding: 20px;
   position: relative;
 }
- .postImage {
-   width: 600px;
+.title {
+  margin-left: 5px;
+}
+.title a {
+  text-decoration: none;
+}
+ .image {
+   width: 650px;
    height: 400px;
-   margin: 15px auto;
+   margin: 10px auto;
  }
-.postUserImage {
-   width: 60px;
-   height: 60px;
+.userImage {
+   width: 48px;
+   height: 48px;
    float: left;
    margin-right: 10px;
  }
-.postArticle {
-  background: green;
-  width: 800px;
-  margin: 0 auto;
-  padding: 10px;
-}
 .postShow {
   background: yellow;
   margin: 0 auto;
   margin-bottom: 30px;
   padding: 10px;
+}
+.barrier {
+  text-align: center;
+  padding-bottom: 8px;
+}
+.barrier a {
+  text-decoration: none;
 }
