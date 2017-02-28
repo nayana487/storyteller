@@ -7,6 +7,9 @@
   <% else %>
   <% end %>
 </h2>
+  <% if current_user %>
+    <p><%= link_to "Add Story To This Community", new_community_story_path(@community) %></p>
+  <% end %>
 </div>
 
 <img class="header" src="<%= @community.header %>" />
@@ -32,7 +35,7 @@
 
 <% @community.stories.each do |story| %>
   <div class="element">
-    <h2 class="title"><%= link_to story.title, community_story_path(story) %></h2>
+    <h2 class="title"><%= link_to story.title, community_story_path(@community, story) %></h2>
     <img class="image" src="<%= story.image %>"><br />
     <img class="userImage" src="<%= story.user.image %>">
     <h4>By: <%= story.user.name %></h4>

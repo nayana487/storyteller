@@ -1,6 +1,6 @@
 <div class="element">
 <h2 class="title"><%= @story.title %> </h2>
-<h2 class="title">Community: <%= @story.community.name %> </h2>
+<h2 class="title">Community: <%= link_to  @story.community.name, community_path(@story.community_id) %> </h2>
 <img class="image" src="<%= @story.image %>"><br />
 <img class="userImage" src="<%= @story.user.image %>">
 <h4>By: <%= @story.user.name %></h4>
@@ -9,16 +9,17 @@
 <p> <%= @story.content %> </p>
 <% if current_user && current_user == @story.user %>
   <br />
-  <%= link_to "Edit Story", edit_community_story_path(@story) %>
-  <%= link_to "Delete Story", community_story_path(@story), method: :delete %>
+  <% @community = Community.find(params[:community_id]) %>
+  <%= link_to "Edit Story", edit_community_story_path(@community, @story) %>
+  <%= link_to "Delete Story", community_story_path(@community, @story), method: :delete %>
 <% end %>
 </div>
 
 <div class="element barrier">
 <h3>Comments</h3>
   <% if current_user %>
-  <h4>Add A New Comment</h4>
-    <%#= link_to "Add New Comment!", new_community_story_storycomment_path(@story) %>
+    <% @community = Community.find(params[:community_id]) %>
+    <h4><%= link_to "Add New Comment!", new_community_story_storycomment_path(@community, @story, @storycomment) %></h4>
   <% end %>
 </div>
 
@@ -31,8 +32,9 @@
     <p><%= storycomment.content %></p>
     <% if current_user && current_user == storycomment.user %>
       <br />
-      <%= link_to "Edit", edit_community_story_storycomment_path(@story, storycomment) %> |
-      <%= link_to "Delete", community_story_storycomment_path(@story, storycomment), method: :delete %>
-      <% end %>
+      <% @community = Community.find(params[:community_id]) %>
+      <%= link_to "Edit", edit_community_story_storycomment_path(@community, @story, storycomment) %> |
+      <%= link_to "Delete", community_story_storycomment_path(@community, @story, storycomment), method: :delete %>
+    <% end %>
   </div>
 <% end %>

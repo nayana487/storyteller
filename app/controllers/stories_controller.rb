@@ -13,6 +13,7 @@ class StoriesController < ApplicationController
 
     #edit
     def edit
+      @community = Community.find(params[:community_id])
       @story = Story.find(params[:id])
       if @story.user == current_user
       else
@@ -23,36 +24,40 @@ class StoriesController < ApplicationController
 
     #update
     def update
+      @community = Community.find(params[:community_id])
       @story = Story.find(params[:id])
       @story.update(story_params.merge(user:current_user))
-      redirect_to community_story_path(@story)
+      redirect_to community_story_path(@community, @story)
     end
 
     #new
     def new
+      @community = Community.find(params[:community_id])
       @story = Story.new
     end
 
     #create
     def create
-      @story = Story.create!(story_params.merge(user: current_user))
-      redirect_to community_story_path(@story)
+      @community = Community.find(params[:community_id])
+      @story = @community.stories.create!(story_params.merge(user: current_user))
+      redirect_to community_story_path(@community, @story)
     end
 
     #destroy
     def destroy
+      @community = Community.find(params[:community_id])
       @story = Story.find(params[:id])
       if @story.user == current_user
         @story.destroy
       else
         flash[:alert] = "Only the author of the story can delete it"
       end
-      redirect_to community_stories_path
+      redirect_to community_path(@community)
     end
 
     private
     def story_params
-      params.require(:post).permit(:title, :content, :image)
+      params.require(:story).permit(:title, :content, :image)
     end
 
 end

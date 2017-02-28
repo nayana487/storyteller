@@ -1,7 +1,7 @@
 <div class="element">
-<h2 class="title">Add A New Story</h2>
+<h2 class="title">Add A New Story To This Community</h2>
 
-<%= form_for @post do |f| %>
+<%= form_for [@community, @story] do |f| %>
   <p><%= f.label :title %>
   <%= f.text_field :title %></p>
 

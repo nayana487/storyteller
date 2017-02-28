@@ -39,3 +39,12 @@
 .barrier a {
   text-decoration: none;
 }
+.submit {
+  color: blue;
+}
+input[type=submit] {
+    padding:5px 15px;
+    background: #ccc;
+    border:0 none;
+    border-radius: 5px;
+}

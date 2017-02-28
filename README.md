@@ -32,11 +32,14 @@ Three cases of user stories
 3. Admin
 
 # Possible Future Upgrades
+- Style Forms
+- Only members in a community can add stories to this community
+- Include edit and new comment forms in the post and story show pages
 - Adding admin functionality
 - Add Feedback Form
 - Add favorites
 - Add tags
 - View your and other users profiles
 - Follow other users
-- Styling devise forms
+- Styling devise forms, and add to them the extra columns
 - Clear the unused and unauthorized routes
