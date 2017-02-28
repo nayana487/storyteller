@@ -63,3 +63,11 @@ h4 {
   font-style: italic;
   margin: 7px 0;
 }
+
+.alert{
+     color:#f00;
+  }
+
+.notice{
+   color:#00f;
+}

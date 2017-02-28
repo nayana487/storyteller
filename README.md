@@ -26,7 +26,17 @@ Frequent commits dating back to the very beginning of the project.
 # Pseudocode
 
 # User stories
+Three cases of user stories
+1. Unlogged user
+2. Logged user
+3. Admin
 
 # Possible Future Upgrades
 - Adding admin functionality
 - Add Feedback Form
+- Add favorites
+- Add tags
+- View your and other users profiles
+- Follow other users
+- Styling devise forms
+- Clear the unused and unauthorized routes

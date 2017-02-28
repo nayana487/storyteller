@@ -1,18 +1,23 @@
-<div class="element barrier">
-<h2><%= link_to "Create A New Community", new_community_path %></h2>
-</div>
+<% if current_user %>
+  <div class="element barrier">
+  <h2><%= link_to "Create A New Community", new_community_path %></h2>
+  </div>
+<% end %>
 
 <% @communities.each do |community| %>
   <div class="element">
-    <h2 class="title"><%= link_to community.name, community_path(community) %> |
-    <% if current_user.id == 1 %>
-      <%= link_to "Edit Community", edit_community_path(community) %> | 
-    <% end %>
-    <% if community.memberships.find_by(user_id: current_user.id) %>
-        <%= link_to "Leave Community".html_safe, remove_membership_community_path(community), method: :delete, class: "fav" %>
+    <h2 class="title"><%= link_to community.name, community_path(community) %>
+      <% if current_user %> |
+        <% if current_user.id == 1 %>
+          <%= link_to "Edit Community", edit_community_path(community) %> |
+        <% end %>
+        <% if community.memberships.find_by(user_id: current_user.id) %>
+            <%= link_to "Leave Community".html_safe, remove_membership_community_path(community), method: :delete, class: "fav" %>
+          <% else %>
+            <%= link_to "Join Community".html_safe, add_membership_community_path(community), method: :post, class: "no-fav" %>
+        <% end %>
       <% else %>
-        <%= link_to "Join Community".html_safe, add_membership_community_path(community), method: :post, class: "no-fav" %>
-    <% end %>
+      <% end %>
     </h2>
     <img class="image" src="<%= community.header %>"><br />
   </div>
