@@ -20,7 +20,12 @@ Frequent commits dating back to the very beginning of the project.
 4. A link to your hosted, working application in the URL section of your Github repo.
 
 # Project Description
+
 # Technology
+
 # Pseudocode
+
 # User stories
+
 # Possible Future Upgrades
+- Adding admin functionality

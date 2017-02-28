@@ -1,0 +1,15 @@
+<h2>Community: <%= @community.name %></h2>
+<h3>Join</h3>
+<h3><%= link_to "Edit Community", edit_community_path %></h3>
+<img src="<%= @community.header %>" />
+
+<% @community.stories.each do |story| %>
+  <div>
+    <h2><%= link_to story.title, community_story_path(story) %></h2>
+    <img src="<%= story.image %>"><br />
+    <h4>By: <%= story.user.name %></h4>
+    <h4>Created At: <%= story.created_at %>, Updated at: <%= story.updated_at %> </h4>
+    <hr />
+    <p> <%= story.content %> </p>
+  </div>
+<% end %>

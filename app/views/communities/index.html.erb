@@ -1,0 +1,10 @@
+<h2><%= link_to "Create New Community", new_community_path %></h2>
+<br />
+<% @communities.each do |community| %>
+  <div class="communityElement">
+    <h2 class="communityTitle"><%= link_to community.name, community_path(community) %></h2>
+    <h3>Join</h3>
+    <img class="communityImage" src="<%= community.header %>"><br />
+    <hr />
+  </div>
+<% end %>

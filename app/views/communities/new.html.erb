@@ -1,0 +1,11 @@
+<h2>Create A New Community</h2>
+
+<%= form_for @community do |f| %>
+  <p><%= f.label :name %>
+  <%= f.text_field :name %></p>
+
+  <p><%= f.label :header %>
+  <%= f.text_area :header %></p>
+
+  <%= f.submit %>
+<% end %>

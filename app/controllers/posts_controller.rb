@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   #index
   def index
     @posts = Post.all
+    @communities = Community.all
   end
 
   #show
