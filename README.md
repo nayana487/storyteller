@@ -29,3 +29,4 @@ Frequent commits dating back to the very beginning of the project.
 
 # Possible Future Upgrades
 - Adding admin functionality
+- Add Feedback Form
