@@ -52,6 +52,7 @@ class CommunitiesController < ApplicationController
   def add_membership
     @community = Community.find(params[:id])
     @community.memberships.create!(user_id: current_user.id)
+    redirect_to :back
   end
 
   #Leave Community

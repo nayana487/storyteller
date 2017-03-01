@@ -24,21 +24,32 @@ Storyteller is a storytelling platform. It's a place where users can join, tell 
 Three cases of user stories
 1. As an unlogged user
 - I should be able to explore communities, and read stories and comments within these communities
-2. Logged user
-3. Admin
+2. As a logged user
+In addition to being able to do everything unlogged users can do:
+- I should be able to see my profile, and other users' profiles
+- I should be able to edit my account and my profile
+- I should be able to post stories to my profile
+- I should be able to see stories shared by other users on their profiles
+- I should be able to join and leave communities
+- I should be able to comment on stories in profiles and communities
+- I should be able to add stories to the communities I join
+- I should be able to leave a feedback to the admin
+3. As an Admin
+In addition to being able to do everything logged users can do:
+- I should be able to see the feedback left by users
+- I should be able to see a list of users
+- I should be the only one able to edit communities
+- I should be able to edit or delete anything on the app (still in progress)
 
 # Possible Future Upgrades
-Forms
-- Expand the content field in forms
-- Edit the button text on forms
-
 Style
 - Better seed data
 - Update ERDs and Wireframes
+- Expand the content field in forms
+- Edit the button text on forms
 
 Functionality
 - Adding admin functionality
-- Clear the unused and unauthorized routes for loged-in users and admins
 
 New Features
 - Sign in with Facebook account
