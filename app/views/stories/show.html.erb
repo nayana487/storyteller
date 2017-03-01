@@ -7,12 +7,15 @@
 <h4>Created At: <%= @story.created_at %>, Last Update: <%= @story.updated_at %></h4>
 <hr />
 <p> <%= @story.content %> </p>
-<% if current_user && current_user == @story.user %>
-  <br />
-  <% @community = Community.find(params[:community_id]) %>
-  <%= link_to "Edit Story", edit_community_story_path(@community, @story) %>
-  <%= link_to "Delete Story", community_story_path(@community, @story), method: :delete %>
+<% if current_user %>
+  <% if current_user == @story.user || current_user.id == 1 %>
+    <br />
+    <% @community = Community.find(params[:community_id]) %>
+    <%= link_to "Edit Story", edit_community_story_path(@community, @story) %> |
+    <%= link_to "Delete Story", community_story_path(@community, @story), method: :delete %>
+  <% end %>
 <% end %>
+
 </div>
 
 <div class="element barrier">
@@ -27,11 +30,13 @@
     <h4>Created At: <%= storycomment.created_at %>, Last Update <%= storycomment.updated_at %></h4>
     <hr />
     <p><%= storycomment.content %></p>
-    <% if current_user && current_user == storycomment.user %>
-      <br />
-      <% @community = Community.find(params[:community_id]) %>
-      <%= link_to "Edit", edit_community_story_storycomment_path(@community, @story, storycomment) %> |
-      <%= link_to "Delete", community_story_storycomment_path(@community, @story, storycomment), method: :delete %>
+    <% if current_user %>
+      <% if current_user == storycomment.user || current_user.id == 1 %>
+        <br />
+        <% @community = Community.find(params[:community_id]) %>
+        <%= link_to "Edit", edit_community_story_storycomment_path(@community, @story, storycomment) %> |
+        <%= link_to "Delete", community_story_storycomment_path(@community, @story, storycomment), method: :delete %>
+      <% end %>
     <% end %>
   </div>
 <% end %>

@@ -18,7 +18,7 @@ class StoriesController < ApplicationController
     def edit
       @community = Community.find(params[:community_id])
       @story = Story.find(params[:id])
-      if @story.user == current_user
+      if current_user == @story.user || current_user.id == 1
       else
         redirect_to community_story_path(@story)
         flash[:alert] = "Only the author of the story can edit it!"
@@ -58,7 +58,7 @@ class StoriesController < ApplicationController
     def destroy
       @community = Community.find(params[:community_id])
       @story = Story.find(params[:id])
-      if @story.user == current_user
+      if current_user == @story.user || current_user.id == 1
         @story.destroy
       else
         flash[:alert] = "Only the author of the story can delete it"

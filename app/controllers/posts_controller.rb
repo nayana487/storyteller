@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   #edit
   def edit
     @post = Post.find(params[:id])
-    if @post.user == current_user
+    if current_user == @post.user || current_user.id == 1
     else
       redirect_to post_path(@post)
       flash[:alert] = "Only the author of the post can edit it!"
@@ -54,7 +54,7 @@ class PostsController < ApplicationController
   #destroy
   def destroy
     @post = Post.find(params[:id])
-    if @post.user == current_user
+    if current_user == @post.user || current_user.id == 1
       @post.destroy
     else
       flash[:alert] = "Only the author of the post can delete"

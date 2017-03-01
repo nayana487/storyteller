@@ -35,7 +35,7 @@ class StorycommentsController < ApplicationController
     @story = Story.find(params[:story_id])
     @storycomment = Storycomment.find(params[:id])
     if current_user
-      if current_user == @storycomment.user
+      if current_user == @storycomment.user || current_user.id == 1
       else
         @community = Community.find(params[:community_id])
         @story = Story.find(params[:story_id])
@@ -62,8 +62,12 @@ class StorycommentsController < ApplicationController
     @community = Community.find(params[:community_id])
     @story = Story.find(params[:story_id])
     @storycomment = Storycomment.find(params[:id])
-    @storycomment.destroy
-    redirect_to community_story_path(@community, @story)
+    if current_user == @storycomment.user || current_user.id == 1
+      @storycomment.destroy
+      redirect_to community_story_path(@community, @story)
+    else
+      redirect_to community_story_path(@community, @story)
+    end
   end
 
   private

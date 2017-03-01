@@ -39,7 +39,7 @@ In addition to being able to do everything logged users can do:
 - I should be able to see the feedback left by users
 - I should be able to see a list of users
 - I should be the only one able to edit communities
-- I should be able to edit or delete anything on the app (still in progress)
+- I should be able to edit or delete anything on the app
 
 # Possible Future Upgrades
 Style
@@ -48,9 +48,6 @@ Style
 - Expand the content field in forms
 - Edit the button text on forms
 
-Functionality
-- Adding admin functionality
-
 New Features
 - Sign in with Facebook account
 - Flexbox
@@ -58,3 +55,6 @@ New Features
 - Add tags
 - Follow other users
 - Add Tests
+
+Bugs
+- Edit Account leads to a wrong page when editing other
