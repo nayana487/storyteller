@@ -5,9 +5,11 @@
 <img class="image" src="<%= @user.image %>" />
 </div>
 
-<div class="element barrier">
-  <h2><%= link_to "Add Story", new_post_path %></h2>
-</div>
+<% if current_user == @user %>
+  <div class="element barrier">
+    <h2><%= link_to "Add Story", new_post_path %></h2>
+  </div>
+<% end %>
 
 <% @user.posts.each do |post| %>
   <div class="element">

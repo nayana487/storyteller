@@ -40,22 +40,29 @@ class UsersController < ApplicationController
 
   #update
   def update
-    if current_user
-      if current_user.id == 1
-        @user = User.find(params[:id])
-        @user.update(user_params)
-        redirect_to user_path(@user)
-        elsif current_user == @user
-          @user = User.find(params[:id])
-          @user.update(user_params)
-          redirect_to user_path(@user)
-        else
-          redirect_to root_url
-      end
-    else
-      redirect_to root_url
-    end
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    redirect_to user_path(@user)
   end
+
+
+  # def update
+  #   if current_user
+  #     if current_user.id == 1
+  #       @user = User.find(params[:id])
+  #       @user.update(user_params)
+  #       redirect_to user_path(@user)
+  #     elsif current_user == @user
+  #         @user = User.find(params[:id])
+  #         @user.update(user_params)
+  #         redirect_to user_path(@user)
+  #       else
+  #         redirect_to root_url
+  #     end
+  #   else
+  #     redirect_to root_url
+  #   end
+  # end
 
   private
   def user_params
