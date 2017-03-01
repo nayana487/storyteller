@@ -1,0 +1,22 @@
+<div class="element">
+<h2 class="title"><%= @user.name %><%= link_to " | Edit Profile", edit_user_path(@user) if current_user == @user || current_user.id == 1 %></h2>
+<h4>Age: <%= @user.age %></h4>
+<h4>Email: <%= @user.email %></h4>
+<img class="image" src="<%= @user.image %>" />
+</div>
+
+<div class="element barrier">
+  <h2><%= link_to "Add Story", new_post_path %></h2>
+</div>
+
+<% @user.posts.each do |post| %>
+  <div class="element">
+    <h2 class="title"><%= link_to post.title, post_path(post) %></h2>
+    <img class="image" src="<%= post.image %>"><br />
+    <img class="userImage" src="<%= post.user.image %>">
+    <h3>By: <%= post.user.name %></h3>
+    <h4>Created At: <%= post.created_at %>, Last Update: <%= post.updated_at %></h4>
+    <hr />
+    <p> <%= post.content %> </p>
+  </div>
+<% end %>
