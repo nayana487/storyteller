@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   resources :users, :only =>[:show, :edit, :update]
 
   devise_for :users, controllers: {
-          sessions: 'users/sessions'
+          sessions: 'users/sessions',
+          registrations: "users/registrations"
         }, :path_prefix => 'd'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
