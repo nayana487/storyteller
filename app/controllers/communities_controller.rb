@@ -12,10 +12,14 @@ class CommunitiesController < ApplicationController
   #edit
   def edit
     @community = Community.find(params[:id])
-    if current_user.id == 1
+    if current_user
+      if current_user.id == 1
+      else
+        redirect_to community_path(@community)
+        flash[:alert] = "Only admins can edit communities!"
+      end
     else
       redirect_to community_path(@community)
-      flash[:alert] = "Only admins can edit communities!"
     end
   end
 
@@ -48,7 +52,6 @@ class CommunitiesController < ApplicationController
   def add_membership
     @community = Community.find(params[:id])
     @community.memberships.create!(user_id: current_user.id)
-    redirect_to :back
   end
 
   #Leave Community

@@ -1,5 +1,11 @@
 class CommentsController < ApplicationController
 
+  #index
+  def index
+    @post = Post.find(params[:post_id])
+    redirect_to post_path(@post)
+  end
+
   #new
   def new
     redirect_to post_path(@post)
@@ -22,7 +28,15 @@ class CommentsController < ApplicationController
   #edit
   def edit
     @post = Post.find(params[:post_id])
-    @comment = Comment.find(params[:id])
+    if current_user
+      if current_user == @comment.user
+        @comment = Comment.find(params[:id])
+      else
+        redirect_to post_path(@post)
+      end
+    else
+        redirect_to post_path(@post)
+    end
   end
 
   #update

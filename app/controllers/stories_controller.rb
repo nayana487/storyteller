@@ -2,8 +2,10 @@ class StoriesController < ApplicationController
 
     #index
     def index
-      @stories = Story.all
-      @communities = Community.all
+      # @stories = Story.all
+      # @communities = Community.all
+      @community = Community.find(params[:community_id])
+      redirect_to community_path(@community)
     end
 
     #show

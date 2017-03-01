@@ -31,9 +31,21 @@ class StorycommentsController < ApplicationController
 
   #edit
   def edit
-    @@community = Community.find(params[:community_id])
+    @community = Community.find(params[:community_id])
     @story = Story.find(params[:story_id])
     @storycomment = Storycomment.find(params[:id])
+    if current_user
+      if current_user == @storycomment.user
+      else
+        @community = Community.find(params[:community_id])
+        @story = Story.find(params[:story_id])
+        redirect_to community_story_path(@community, @story)
+      end
+    else
+      @community = Community.find(params[:community_id])
+      @story = Story.find(params[:story_id])
+      redirect_to community_story_path(@community, @story)
+    end
   end
 
   #update

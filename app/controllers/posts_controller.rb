@@ -31,7 +31,11 @@ class PostsController < ApplicationController
 
   #new
   def new
-    @post = Post.new
+    if current_user
+      @post = Post.new
+    else
+      redirect_to root_path
+    end
   end
 
   #create

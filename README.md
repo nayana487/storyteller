@@ -37,9 +37,10 @@ Style
 
 Functionality
 - Adding admin functionality
-- Clear the unused and unauthorized routes
+- Clear the unused and unauthorized routes for loged-in users and admins
 
 New Features
+- Sign in with Facebook account
 - Flexbox
 - Add favorites
 - Add tags
