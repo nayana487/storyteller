@@ -27,13 +27,21 @@ Three cases of user stories
 3. Admin
 
 # Possible Future Upgrades
+Forms
 - Style Forms
-- Only members in a community can add stories to this community
+- Styling devise forms, and add to them the extra columns
 - Include edit and new comment forms in the post and story show pages
+
+Functionality
+- Only members in a community can add stories to this community
 - Adding admin functionality
+- Clear the unused and unauthorized routes
+
+New Features
+- Flexbox
 - Add favorites
 - Add tags
 - View your and other users profiles
 - Follow other users
-- Styling devise forms, and add to them the extra columns
-- Clear the unused and unauthorized routes
+- Test Driven Development
+- Make it a Tor-friendly app
