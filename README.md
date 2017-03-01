@@ -28,12 +28,12 @@ Three cases of user stories
 
 # Possible Future Upgrades
 Forms
-- Include edit and new comment forms in the post and story show pages
+- Expand the content field in forms
 - Edit the button text on forms
 
 Style
-- Expand the content field in forms
 - Better seed data
+- Update ERDs and Wireframes
 
 Functionality
 - Adding admin functionality

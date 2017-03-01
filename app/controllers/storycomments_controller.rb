@@ -1,15 +1,24 @@
 class StorycommentsController < ApplicationController
 
+  def index
+    @community = Community.find(params[:community_id])
+    @story = Story.find(params[:story_id])
+    redirect_to community_story_path(@community, @story)
+  end
+
   #show
   def show
-    @storycomment = Storycomment.find(params[:id])
+    @community = Community.find(params[:community_id])
+    @story = Story.find(params[:story_id])
+    redirect_to community_story_path(@community, @story)
   end
 
   #new
   def new
-    @community = Community.find(params[:community_id])
-    @story = Story.find(params[:story_id])
-    @storycomment = Storycomment.new
+    # @community = Community.find(params[:community_id])
+    # @story = Story.find(params[:story_id])
+    # @storycomment = Storycomment.new
+    redirect_to community_story_path(@story)
   end
 
   #create
