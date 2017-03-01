@@ -8,7 +8,10 @@
   <% end %>
 </h2>
   <% if current_user %>
-    <p><%= link_to "Add Story To This Community", new_community_story_path(@community) %></p>
+    <% if @community.memberships.find_by(user_id: current_user.id) %>
+      <p><%= link_to "Add Story To This Community", new_community_story_path(@community) %></p>
+      <% else %>
+    <% end %>
   <% end %>
 </div>
 

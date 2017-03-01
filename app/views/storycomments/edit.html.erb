@@ -3,8 +3,7 @@
 
   <% @community = Community.find(params[:community_id]) %>
   <%= form_for [@community, @story, @storycomment] do |f| %>
-    <p><%= f.label :content %><br />
-      <br />
+    <p>
     <%= f.text_field :content, :size=>"80" %></p>
     <br />
 

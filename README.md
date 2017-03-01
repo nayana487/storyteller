@@ -32,17 +32,16 @@ Forms
 - Edit the button text on forms
 
 Style
-- Flexbox
 - Expand the content field in forms
+- Better seed data
 
 Functionality
-- Only members in a community can add stories to this community
 - Adding admin functionality
 - Clear the unused and unauthorized routes
-- Test Driven Development
-- Make it a Tor-friendly app
 
 New Features
+- Flexbox
 - Add favorites
 - Add tags
 - Follow other users
+- Add Tests

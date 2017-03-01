@@ -33,7 +33,15 @@ class StoriesController < ApplicationController
     #new
     def new
       @community = Community.find(params[:community_id])
-      @story = Story.new
+      if current_user
+        if @community.memberships.find_by(user_id: current_user.id)
+          @story = Story.new
+        else
+          redirect_to community_path(@community)
+        end
+      else
+        redirect_to community_path(@community)
+      end
     end
 
     #create
