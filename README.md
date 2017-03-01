@@ -22,7 +22,8 @@ Storyteller is a storytelling platform. It's a place where users can join, tell 
 
 # User stories
 Three cases of user stories
-1. Unlogged user
+1. As an unlogged user
+- I should be able to explore communities, and read stories and comments within these communities
 2. Logged user
 3. Admin
 

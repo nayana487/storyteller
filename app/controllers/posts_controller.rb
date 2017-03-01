@@ -2,14 +2,21 @@ class PostsController < ApplicationController
 
   #index
   def index
-    @posts = Post.all
-    @communities = Community.all
+  @communities = Community.all
+    if current_user
+      @posts = Post.all
+    else
+    end
   end
 
   #show
   def show
-    @post = Post.find(params[:id])
-    @comment = Comment.new
+    if current_user
+      @post = Post.find(params[:id])
+      @comment = Comment.new
+    else
+      redirect_to root_path
+    end
   end
 
   #edit
