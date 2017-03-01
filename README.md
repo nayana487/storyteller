@@ -41,7 +41,6 @@ New Features
 - Flexbox
 - Add favorites
 - Add tags
-- View your and other users profiles
 - Follow other users
 - Test Driven Development
 - Make it a Tor-friendly app
