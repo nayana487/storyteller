@@ -2,14 +2,21 @@
 <h2 class="title">Edit Story</h2>
 
 <%= form_for [@community, @story] do |f| %>
-  <p><%= f.label :title %>
-  <%= f.text_field :title %></p>
+  <p><%= f.label :title %><br />
+    <br />
+  <%= f.text_field :title, :size=>"80" %></p>
+  <br />
 
-  <p><%= f.label :content %>
-  <%= f.text_area :content %></p>
+  <p><%= f.label :image %><br />
+    <br />
+  <%= f.text_field :image, :size=>"80" %></p>
+    <br />
 
-  <p><%= f.label :image %>
-  <%= f.text_area :image %></p>
+  <p><%= f.label :content %><br />
+    <br />
+  <%= f.text_field :content, :size=>"80" %></p>
+  <br />
+
   <br />
   <p class="submit"><%= f.submit %></p>
 <% end %>

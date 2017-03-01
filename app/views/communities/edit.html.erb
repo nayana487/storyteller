@@ -1,13 +1,20 @@
-<h2>Edit Community</h2>
+<div class="element">
+<h2 class="title">Edit Community</h2>
 
 <%= form_for @community do |f| %>
-  <p><%= f.label :name %>
-  <%= f.text_field :name %></p>
+  <p><%= f.label :name %><br />
+    <br />
+  <%= f.text_field :name, :size=>"80" %></p>
+  <br />
 
-  <p><%= f.label :header %>
-  <%= f.text_area :header %></p>
+  <p><%= f.label :header %><br />
+    <br />
+  <%= f.text_field :header, :size=>"80" %></p>
+    <br />
 
-  <%= f.submit %>
+  <p class="submit"><%= f.submit %></p>
 <% end %>
-
+  <br />
 <%= link_to "Delete Community", community_path(@community), method: :delete %>
+
+</div>

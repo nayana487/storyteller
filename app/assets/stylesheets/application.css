@@ -40,6 +40,7 @@ nav a {
    text-decoration: none;
  }
 main {
+   min-height: 85vh;
    margin: 0 auto;
    width: 800px;
    background: #75dfbc;

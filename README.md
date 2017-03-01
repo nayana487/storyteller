@@ -28,19 +28,21 @@ Three cases of user stories
 
 # Possible Future Upgrades
 Forms
-- Style Forms
-- Styling devise forms, and add to them the extra columns
 - Include edit and new comment forms in the post and story show pages
+- Edit the button text on forms
+
+Style
+- Flexbox
+- Expand the content field in forms
 
 Functionality
 - Only members in a community can add stories to this community
 - Adding admin functionality
 - Clear the unused and unauthorized routes
+- Test Driven Development
+- Make it a Tor-friendly app
 
 New Features
-- Flexbox
 - Add favorites
 - Add tags
 - Follow other users
-- Test Driven Development
-- Make it a Tor-friendly app

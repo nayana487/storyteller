@@ -1,16 +1,27 @@
-<h2>Edit Your Profile</h2>
-<%= form_for @user do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
+<div class="element">
+<h2 class="title">Edit Your Profile</h2>
 
+<%= form_for @user do |f| %>
   <p><%= f.label :name %><br />
-  <%= f.text_field :name %></p>
+    <br />
+  <%= f.text_field :name, :size=>"80" %></p>
+  <br />
+
+  <p><%= f.label :email %><br />
+    <br />
+  <%= f.text_field :email, :size=>"80" %></p>
+  <br />
 
   <p><%= f.label :age %><br />
-  <%= f.text_field :age %></p>
+    <br />
+  <%= f.text_field :age, :size=>"80" %></p>
+  <br />
 
   <p><%= f.label :image %><br />
-  <%= f.text_field :image %></p>
+    <br />
+  <%= f.text_field :image, :size=>"80" %></p>
+    <br />
 
-  <%= f.submit "Submit" %>
+  <p class="submit"><%= f.submit %></p>
 <% end %>
+</div>

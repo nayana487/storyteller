@@ -1,7 +1,14 @@
-<h2>New Comment</h2>
+<div class="element">
+  <h2 class="title">New Comment</h2>
 
-<%= form_for [@community, @story, @storycomment] do |f| %>
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-  <%= f.submit %>
-<% end %>
+  <% @community = Community.find(params[:community_id]) %>
+  <%= form_for [@community, @story, @storycomment] do |f| %>
+    <p><%= f.label :content %><br />
+      <br />
+    <%= f.text_field :content, :size=>"80" %></p>
+    <br />
+
+    <br />
+    <p class="submit"><%= f.submit %></p>
+  <% end %>
+</div>
