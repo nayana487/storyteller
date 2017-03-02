@@ -8,14 +8,14 @@ Storyteller is a storytelling platform. It's a place where users can join, tell 
 - Storyteller is built with Ruby on Rails. It uses Object-relational mapping (ORM) for converting data between Ruby and Postgres.
 - Storyteller follows the Representational State Transfer convention (REST) as a standard for communications between the server and browsers.
 - Storyteller uses Devise, a gem responsible for managing users and sessions.
-- Storyteller also uses Reset CSS, to provide a consistent experience across browsers.
+- Storyteller also uses Reset CSS, and Normalize CSS, to provide a consistent experience across browsers.
 - Storyteller is deployed on Heroku.
 
 # Screencast
 https://www.youtube.com/watch?v=Koqdlu7o-2A&feature=youtu.be
 
 #ERD
-![Storyteller-ERD](./planning/ERD-MVP.png?raw=true "Title")
+![Storyteller-ERD](./planning/ERD-MVP.png?raw=true "ERD")
 
 # User stories
 Three cases of user stories
