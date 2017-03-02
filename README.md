@@ -15,7 +15,7 @@ Storyteller is a storytelling platform. It's a place where users can join, tell 
 https://www.youtube.com/watch?v=Koqdlu7o-2A&feature=youtu.be
 
 #ERD
-![Storyteller-ERD](./planning/ERD-MVP.png?raw=true "ERD")
+![Storyteller-ERD](./planning/erd.png?raw=true "ERD")
 
 # User stories
 Three cases of user stories
