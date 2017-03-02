@@ -54,7 +54,6 @@ Three cases of user stories
 
 # Possible Future Upgrades
 Style
-- HTML and CSS validation
 - Expand the content field in forms
 - Edit the button text on forms
 - Add error handling for all resources.
