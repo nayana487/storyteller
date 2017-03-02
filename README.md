@@ -10,29 +10,32 @@ Storyteller is build with Ruby on Rails. It uses Devise, a gem responsible for m
 # Screencast
 https://www.youtube.com/watch?v=Koqdlu7o-2A&feature=youtu.be
 
+#ERD
+![Alt text](planning/ERD-MVP.png?raw=true "Title")
+
 # User stories
 Three cases of user stories
 
 1. As an unlogged user
-- I should be able to explore communities, and read stories and comments within these communities
+  - I should be able to explore communities, and read stories and comments within these communities
 
 2. As a logged user
-In addition to being able to do everything unlogged users can do:
-- I should be able to see my profile, and other users' profiles
-- I should be able to edit my account and my profile
-- I should be able to post stories to my profile
-- I should be able to see stories shared by other users on their profiles
-- I should be able to join and leave communities
-- I should be able to comment on stories in profiles and communities
-- I should be able to add stories to the communities I join
-- I should be able to leave a feedback to the admin
+  In addition to being able to do everything unlogged users can do:
+  - I should be able to see my profile, and other users' profiles
+  - I should be able to edit my account and my profile
+  - I should be able to post stories to my profile
+  - I should be able to see stories shared by other users on their profiles
+  - I should be able to join and leave communities
+  - I should be able to comment on stories in profiles and communities
+  - I should be able to add stories to the communities I join
+  - I should be able to leave a feedback to the admin
 
 3. As an Admin
-In addition to being able to do everything logged users can do:
-- I should be able to see the feedback left by users
-- I should be able to see a list of users
-- I should be the only one able to edit communities
-- I should be able to edit or delete anything on the app
+  In addition to being able to do everything logged users can do:
+  - I should be able to see the feedback left by users
+  - I should be able to see a list of users
+  - I should be the only one able to edit communities
+  - I should be able to edit or delete anything on the app
 
 # Possible Future Upgrades
 Style
