@@ -57,4 +57,4 @@ New Features
 - Add Tests
 
 Bugs
-- Edit Account leads to a wrong page when editing other
+- Admin Edit Account leads to a wrong page when editing other
