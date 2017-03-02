@@ -17,6 +17,16 @@ https://www.youtube.com/watch?v=Koqdlu7o-2A&feature=youtu.be
 #ERD
 ![Storyteller-ERD](./planning/erd.png?raw=true "ERD")
 
+#Wireframes
+For Unlogged Users
+![wireframe-unlogged](./planning/unlogged.png?raw=true "wireframe-unlogged")
+
+For Logged Users
+![wireframe-logged](./planning/logged.png?raw=true "wireframe-logged")
+
+For Admins
+![wireframe-admin](./planning/admin.png?raw=true "wireframe-admin")
+
 # User stories
 Three cases of user stories
 
@@ -43,12 +53,11 @@ Three cases of user stories
 
 # Possible Future Upgrades
 Style
-- Update ERDs and Wireframes
+- HTML and CSS validation
 - Expand the content field in forms
 - Edit the button text on forms
 - Add error handling for all resources.
-- HTML and CSS validation
-- Bugs: Admin Edit Account leads to a wrong page when editing other
+- Fix Bug: Admin Edit Account leads to a wrong page when editing other user
 
 New Features
 - Sign in with Facebook account
