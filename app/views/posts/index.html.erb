@@ -12,8 +12,8 @@
   <% @posts.each do |post| %>
     <div class="element">
       <h2 class="title"><%= link_to post.title, post_path(post) %></h2>
-      <img class="image" src="<%= post.image %>"><br />
-      <img class="userImage" src="<%= post.user.image %>">
+      <img class="image" src="<%= post.image %>" alt="Story Image" title="Story Image"><br />
+      <img class="userImage" src="<%= post.user.image %>" alt="User Image" title="User Image">
       <% if current_user %>
         <h3>By: <%= link_to post.user.name, user_path(post.user)%></h3>
       <% else %>
@@ -34,8 +34,8 @@
   <% community.stories.each do |story| %>
     <div class="element">
       <h2 class="title"><%= link_to story.title, community_path(story) %></h2>
-      <img class="image" src="<%= story.image %>"><br />
-      <img class="userImage" src="<%= story.user.image %>">
+      <img class="image" src="<%= story.image %>" alt="Story Image" title="Story Image"><br />
+      <img class="userImage" src="<%= story.user.image %>" alt="User Image" title="User Image">
       <h3>By: <%= story.user.name %></h3>
       <h4>Created At: <%= story.created_at %>, Last Update: <%= story.updated_at %></h4>
       <hr />

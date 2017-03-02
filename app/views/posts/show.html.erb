@@ -1,7 +1,7 @@
 <div class="element">
 <h2 class="title"><%= @post.title %> </h2>
-<img class="image" src="<%= @post.image %>"><br />
-<img class="userImage" src="<%= @post.user.image %>">
+<img class="image" src="<%= @post.image %>" alt="Story Image" title="Story Image"><br />
+<img class="userImage" src="<%= @post.user.image %>" alt="User Image" title="User Image">
 <h4>By: <%= @post.user.name %></h4>
 <h4>Created At: <%= @post.created_at %>, Last Update: <%= @post.updated_at %></h4>
 <hr />
@@ -22,7 +22,7 @@
 
 <% @post.comments.each do |comment| %>
   <div class="comment">
-    <img class="userImage" src="<%= comment.user.image %>">
+    <img class="userImage" src="<%= comment.user.image %>" alt="User Image" title="User Image">
     <h4>By: <%= comment.user.name %></h4>
     <h4>Created At: <%= comment.created_at %>, Last Update <%= comment.updated_at %></h4>
     <hr />

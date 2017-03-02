@@ -1,8 +1,8 @@
 <div class="element">
 <h2 class="title"><%= @story.title %> </h2>
 <h2 class="title">Community: <%= link_to  @story.community.name, community_path(@story.community_id) %> </h2>
-<img class="image" src="<%= @story.image %>"><br />
-<img class="userImage" src="<%= @story.user.image %>">
+<img class="image" src="<%= @story.image %>" alt="Story Image" title="Story Image"><br />
+<img class="userImage" src="<%= @story.user.image %>" alt="User Image" title="User Image">
 <h4>By: <%= @story.user.name %></h4>
 <h4>Created At: <%= @story.created_at %>, Last Update: <%= @story.updated_at %></h4>
 <hr />
@@ -25,7 +25,7 @@
 
 <% @story.storycomments.each do |storycomment| %>
   <div class="comment">
-    <img class="userImage" src="<%= storycomment.user.image %>">
+    <img class="userImage" src="<%= storycomment.user.image %>" alt="User Image" title="User Image">
     <h4>By: <%= storycomment.user.name %></h4>
     <h4>Created At: <%= storycomment.created_at %>, Last Update <%= storycomment.updated_at %></h4>
     <hr />
