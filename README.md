@@ -18,13 +18,14 @@ https://www.youtube.com/watch?v=Koqdlu7o-2A&feature=youtu.be
 ![Storyteller-ERD](./planning/erd.png?raw=true "ERD")
 
 #Wireframes
-For Unlogged Users
+
+#For Unlogged Users
 ![wireframe-unlogged](./planning/unlogged.png?raw=true "wireframe-unlogged")
 
-For Logged Users
+#For Logged Users
 ![wireframe-logged](./planning/logged.png?raw=true "wireframe-logged")
 
-For Admins
+#For Admins
 ![wireframe-admin](./planning/admin.png?raw=true "wireframe-admin")
 
 # User stories
