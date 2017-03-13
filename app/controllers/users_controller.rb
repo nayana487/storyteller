@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
-
+# ND: Don't leave this in master branch if you're not using.
   # def update
   #   if current_user
   #     if current_user.id == 1
